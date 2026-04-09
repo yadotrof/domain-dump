@@ -1,0 +1,46 @@
+# Domain Dump
+
+Chrome extension (Manifest V3) that lists every domain a site contacts while it runs — scripts, CDNs, XHR/fetch, images, fonts, iframes, WebSockets, the works. Unique, deduplicated, with a toggle between **root domains** (eTLD+1) and **full hostnames**.
+
+## Features
+
+- Captures all network requests of the active tab via `chrome.webRequest`.
+- Root-domain view uses the Public Suffix List (via [`tldts`](https://github.com/remusao/tldts)), so `cdn.foo.co.uk` collapses to `foo.co.uk`.
+- Per-tab isolation — list resets when you navigate to a new page.
+- Filter box, copy to clipboard, export to `.txt`, clear.
+- Site's own domain is highlighted at the top of the list.
+- Dark-themed popup.
+
+## Install (unpacked)
+
+1. Open `chrome://extensions`.
+2. Enable **Developer mode**.
+3. Click **Load unpacked** and select this folder.
+4. Click the extension icon on any page to see the captured domains.
+
+## Structure
+
+```
+.
+├── manifest.json       # MV3 manifest
+├── background.js       # service worker: webRequest listener + per-tab store
+├── popup.html          # popup markup
+├── popup.css           # dark theme
+├── popup.js            # popup logic (root/full toggle, filter, copy/export/clear)
+├── vendor/
+│   └── tldts.min.js    # PSL-based domain parser
+└── icons/              # 16/48/128 extension icons
+```
+
+## Permissions
+
+- `webRequest` — observe network requests.
+- `webNavigation` — reset per-tab list on top-frame navigation.
+- `tabs` — identify the active tab in the popup.
+- `<all_urls>` — so we see requests on any site.
+
+No data leaves the browser. Everything is kept in memory on the service worker and discarded when the tab closes.
+
+## Notes
+
+- MV3 service workers can sleep; the `webRequest` listener is re-registered on wake-up, which is fine for the "open tab, use it, check the list" flow. If cross-restart persistence is ever needed, move storage to `chrome.storage.session`.

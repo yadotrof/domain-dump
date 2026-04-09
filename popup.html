@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Domain Dump</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <div class="title">
+      <strong>Domain Dump</strong>
+      <span id="count" class="count">0</span>
+    </div>
+    <div class="mode">
+      <label><input type="radio" name="mode" value="root" checked> Root</label>
+      <label><input type="radio" name="mode" value="full"> Full</label>
+    </div>
+  </header>
+
+  <input id="search" type="search" placeholder="Filter…" autocomplete="off">
+
+  <ul id="list"></ul>
+
+  <footer>
+    <button id="copy">Copy</button>
+    <button id="export">Export</button>
+    <button id="clear">Clear</button>
+  </footer>
+
+  <script src="vendor/tldts.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

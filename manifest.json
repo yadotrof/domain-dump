@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Domain Dump",
+  "version": "0.1.0",
+  "description": "Lists all domains a site contacts during its work (CDNs, scripts, XHR, etc.).",
+  "permissions": ["webRequest", "webNavigation", "tabs", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Domain Dump"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

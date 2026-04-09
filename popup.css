@@ -1,0 +1,92 @@
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 13px;
+  width: 360px;
+  background: #14161a;
+  color: #e6e8eb;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-bottom: 1px solid #23262c;
+  background: #1a1d22;
+}
+.title { display: flex; align-items: center; gap: 8px; }
+.title strong { color: #f2f4f7; }
+.count {
+  background: #2a2f38;
+  color: #9ecbff;
+  padding: 1px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+}
+.mode { display: flex; gap: 10px; font-size: 12px; color: #b8bcc4; }
+.mode label { cursor: pointer; }
+.mode input { accent-color: #6aa3ff; }
+#search {
+  width: calc(100% - 24px);
+  margin: 8px 12px;
+  padding: 6px 8px;
+  background: #1d2027;
+  border: 1px solid #2c313a;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #e6e8eb;
+}
+#search::placeholder { color: #6b7280; }
+#search:focus { outline: none; border-color: #4a6fa5; background: #20242c; }
+#list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 380px;
+  overflow-y: auto;
+  border-top: 1px solid #23262c;
+  background: #14161a;
+}
+#list li {
+  padding: 6px 12px;
+  border-bottom: 1px solid #1e2127;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  word-break: break-all;
+  color: #d4d7dd;
+}
+#list li.self {
+  background: #2a2410;
+  color: #ffd580;
+}
+#list li.empty {
+  text-align: center;
+  color: #6b7280;
+  font-style: italic;
+  font-family: inherit;
+}
+#list::-webkit-scrollbar { width: 10px; }
+#list::-webkit-scrollbar-track { background: #14161a; }
+#list::-webkit-scrollbar-thumb { background: #2c313a; border-radius: 5px; }
+#list::-webkit-scrollbar-thumb:hover { background: #3a404a; }
+footer {
+  display: flex;
+  gap: 6px;
+  padding: 8px 12px;
+  border-top: 1px solid #23262c;
+  background: #1a1d22;
+}
+footer button {
+  flex: 1;
+  padding: 6px 8px;
+  background: #242831;
+  border: 1px solid #2c313a;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #e6e8eb;
+}
+footer button:hover { background: #2d323c; border-color: #3a404a; }
+footer button:active { background: #1d2027; }
