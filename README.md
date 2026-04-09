@@ -2,6 +2,10 @@
 
 Chrome extension (Manifest V3) that lists every domain a site contacts while it runs — scripts, CDNs, XHR/fetch, images, fonts, iframes, WebSockets, the works. Unique, deduplicated, with a toggle between **root domains** (eTLD+1) and **full hostnames**.
 
+![Domain Dump popup — root domains](screenshots/screenshot-1.png)
+![Domain Dump popup — full hostnames](screenshots/screenshot-2.png)
+![Domain Dump popup — filter](screenshots/screenshot-3.png)
+
 ## Features
 
 - Captures all network requests of the active tab via `chrome.webRequest`.
