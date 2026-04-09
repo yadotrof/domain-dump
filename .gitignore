@@ -2,5 +2,6 @@
 node_modules/
 *.log
 *.zip
+dist/
 .vscode/
 .idea/

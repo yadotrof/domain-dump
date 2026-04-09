@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Domain Dump</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      max-width: 720px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.55;
+      color: #222;
+      background: #fff;
+    }
+    h1 { margin-bottom: 0.2em; }
+    h2 { margin-top: 2em; border-bottom: 1px solid #eee; padding-bottom: 0.3em; }
+    code { background: #f5f5f7; padding: 1px 4px; border-radius: 3px; }
+    a { color: #0060df; }
+    .updated { color: #888; font-size: 0.9em; }
+    hr { border: 0; border-top: 1px solid #eee; margin: 2em 0; }
+  </style>
+</head>
+<body>
+
+<h1>Privacy Policy — Domain Dump</h1>
+<p class="updated">Last updated: 2026-04-09</p>
+
+<h2>English</h2>
+
+<p><strong>Domain Dump does not collect, store, transmit, or share any personal data.</strong></p>
+
+<p>The extension observes the network requests of the browser tab you are actively viewing in order to build a list of the domains that tab contacts. This is its single purpose.</p>
+
+<ul>
+  <li><strong>What is processed:</strong> URLs of requests initiated by the current tab (only their hostnames are kept).</li>
+  <li><strong>Where it is stored:</strong> in memory of the extension's service worker, scoped to the tab. Data is discarded when the tab is closed or when you navigate to a new page.</li>
+  <li><strong>What leaves your browser:</strong> nothing. No analytics, no telemetry, no remote servers, no third-party SDKs. The extension makes no network requests of its own.</li>
+  <li><strong>Who can see the data:</strong> only you, inside the extension popup.</li>
+  <li><strong>Permissions used:</strong>
+    <ul>
+      <li><code>webRequest</code> — to observe requests made by the current tab.</li>
+      <li><code>webNavigation</code> — to reset the list when the tab navigates to a new page.</li>
+      <li><code>host_permissions: &lt;all_urls&gt;</code> — so requests on any website the user visits can be observed.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>The extension is open source. You can audit the full code at <a href="https://github.com/yadotrof/domain-dump">github.com/yadotrof/domain-dump</a>.</p>
+
+<p><strong>Contact:</strong> open an issue at <a href="https://github.com/yadotrof/domain-dump/issues">github.com/yadotrof/domain-dump/issues</a>.</p>
+
+<hr>
+
+<h2>Русский</h2>
+
+<p><strong>Domain Dump не собирает, не хранит, не передаёт и не публикует никаких персональных данных.</strong></p>
+
+<p>Расширение наблюдает за сетевыми запросами активной вкладки браузера, чтобы составить список доменов, к которым эта вкладка обращается. Это его единственная задача.</p>
+
+<ul>
+  <li><strong>Что обрабатывается:</strong> URL-адреса запросов, инициированных текущей вкладкой (сохраняются только их hostnames).</li>
+  <li><strong>Где хранится:</strong> в памяти service worker расширения, изолированно по вкладкам. Данные удаляются при закрытии вкладки или при переходе на новый URL.</li>
+  <li><strong>Что покидает браузер:</strong> ничего. Нет аналитики, телеметрии, удалённых серверов или сторонних SDK. Само расширение не делает никаких сетевых запросов.</li>
+  <li><strong>Кто видит данные:</strong> только вы, в попапе расширения.</li>
+  <li><strong>Используемые разрешения:</strong>
+    <ul>
+      <li><code>webRequest</code> — наблюдение за запросами текущей вкладки.</li>
+      <li><code>webNavigation</code> — сброс списка при навигации вкладки.</li>
+      <li><code>host_permissions: &lt;all_urls&gt;</code> — чтобы можно было видеть запросы на любом сайте, который посещает пользователь.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Расширение имеет открытый исходный код. Полный код доступен на <a href="https://github.com/yadotrof/domain-dump">github.com/yadotrof/domain-dump</a>.</p>
+
+<p><strong>Связь:</strong> открой issue на <a href="https://github.com/yadotrof/domain-dump/issues">github.com/yadotrof/domain-dump/issues</a>.</p>
+
+</body>
+</html>

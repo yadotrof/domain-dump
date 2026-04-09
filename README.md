@@ -35,12 +35,17 @@ Chrome extension (Manifest V3) that lists every domain a site contacts while it 
 
 ## Permissions
 
-- `webRequest` — observe network requests.
-- `webNavigation` — reset per-tab list on top-frame navigation.
-- `tabs` — identify the active tab in the popup.
-- `<all_urls>` — so we see requests on any site.
+- `webRequest` — observe network requests of the current tab.
+- `webNavigation` — reset the per-tab list on top-frame navigation.
+- `<all_urls>` — so requests on any site the user visits can be observed.
 
 No data leaves the browser. Everything is kept in memory on the service worker and discarded when the tab closes.
+
+## License
+
+The extension code is licensed under the [MIT License](LICENSE).
+
+The file [`vendor/psl-data.js`](vendor/psl-data.js) is a compiled snapshot of the [Public Suffix List](https://publicsuffix.org/) and is distributed under the [Mozilla Public License 2.0](https://mozilla.org/MPL/2.0/). Refer to [`vendor/psl.js`](vendor/psl.js) for the matcher implementation (MIT, same as the rest of the extension).
 
 ## Notes
 

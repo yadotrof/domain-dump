@@ -3,7 +3,8 @@
   "name": "Domain Dump",
   "version": "0.1.0",
   "description": "Lists all domains a site contacts during its work (CDNs, scripts, XHR, etc.).",
-  "permissions": ["webRequest", "webNavigation", "tabs", "storage"],
+  "homepage_url": "https://github.com/yadotrof/domain-dump",
+  "permissions": ["webRequest", "webNavigation"],
   "host_permissions": ["<all_urls>"],
   "background": { "service_worker": "background.js" },
   "action": {
