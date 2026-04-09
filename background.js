@@ -1,4 +1,4 @@
-importScripts('vendor/tldts.min.js');
+importScripts('vendor/psl-data.js', 'vendor/psl.js');
 
 // tabId -> Set<hostname>
 const perTab = new Map();

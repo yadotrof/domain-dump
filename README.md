@@ -5,7 +5,7 @@ Chrome extension (Manifest V3) that lists every domain a site contacts while it 
 ## Features
 
 - Captures all network requests of the active tab via `chrome.webRequest`.
-- Root-domain view uses the Public Suffix List (via [`tldts`](https://github.com/remusao/tldts)), so `cdn.foo.co.uk` collapses to `foo.co.uk`.
+- Root-domain view uses the [Public Suffix List](https://publicsuffix.org/), so `cdn.foo.co.uk` collapses to `foo.co.uk`. No third-party JS — the PSL data is vendored and parsed by a small in-repo matcher.
 - Per-tab isolation — list resets when you navigate to a new page.
 - Filter box, copy to clipboard, export to `.txt`, clear.
 - Site's own domain is highlighted at the top of the list.
@@ -28,7 +28,8 @@ Chrome extension (Manifest V3) that lists every domain a site contacts while it 
 ├── popup.css           # dark theme
 ├── popup.js            # popup logic (root/full toggle, filter, copy/export/clear)
 ├── vendor/
-│   └── tldts.min.js    # PSL-based domain parser
+│   ├── psl-data.js     # Vendored Public Suffix List (MPL-2.0) as JSON
+│   └── psl.js          # ~40-line matcher implementing the PSL algorithm
 └── icons/              # 16/48/128 extension icons
 ```
 

@@ -18,7 +18,7 @@
 
   function rootOf(host) {
     try {
-      return tldts.getDomain(host) || host;
+      return PSL.getDomain(host) || host;
     } catch {
       return host;
     }
